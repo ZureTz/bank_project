@@ -1,0 +1,180 @@
+\hypertarget{classbank_1_1_compcard}{}\doxysection{bank\+::Compcard Class Reference}
+\label{classbank_1_1_compcard}\index{bank::Compcard@{bank::Compcard}}
+
+
+{\ttfamily \#include $<$account.\+hpp$>$}
+
+
+
+Inheritance diagram for bank\+::Compcard\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classbank_1_1_compcard__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bank\+::Compcard\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classbank_1_1_compcard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbank_1_1_compcard_a82c99e89d82d91eee3781f3624cb7877}{Compcard}} (std\+::string username, std\+::string password, std\+::string gender, std\+::string telephone, std\+::string ID\+\_\+number, long double \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})
+\item 
+const int \mbox{\hyperlink{classbank_1_1_compcard_ac448658e303c384b703cc405b1203edc}{get\+\_\+sort\+\_\+priority}} () const noexcept
+\item 
+const long double \mbox{\hyperlink{classbank_1_1_compcard_a0c037f6a9eb4f80958a7aa91d68c86de}{get\+\_\+minumum\+\_\+balance}} () const noexcept
+\item 
+const long double \mbox{\hyperlink{classbank_1_1_compcard_aa8778e98faf3a5924ccd25489a2f5991}{get\+\_\+intresest\+\_\+rate}} () const noexcept
+\item 
+void \mbox{\hyperlink{classbank_1_1_compcard_a914147db605046473e5748021c7be870}{withdraw}} (const long double withdraw\+\_\+money\+\_\+count)
+\item 
+long double \mbox{\hyperlink{classbank_1_1_compcard_a03565aa9a31ce7981bc83bb4ea74ac07}{interest}} (const int days) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classbank_1_1_account}{bank\+::\+Account}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbank_1_1_account_ae2083a2990d0f807898c681abc19196f}{Account}} (std\+::string username, std\+::string password, std\+::string gender, std\+::string telephone, std\+::string ID\+\_\+number, long double \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})
+\item 
+bool \mbox{\hyperlink{classbank_1_1_account_aeb5fe53da7c34022da5aaf557145ce4e}{is\+\_\+login}} (const std\+::string \&username, const std\+::string \&password) const noexcept
+\item 
+virtual const int \mbox{\hyperlink{classbank_1_1_account_a9e50f2dfd49ab5f753169f560f9c16e6}{get\+\_\+sort\+\_\+priority}} () const noexcept=0
+\item 
+const long double \mbox{\hyperlink{classbank_1_1_account_a1762c93305dafa87779d6c6427ef2c29}{get\+\_\+balance}} () const noexcept
+\item 
+virtual const long double \mbox{\hyperlink{classbank_1_1_account_a03deaa6e73b88eaf34786cf4f72ec624}{get\+\_\+minumum\+\_\+balance}} () const noexcept=0
+\item 
+virtual const long double \mbox{\hyperlink{classbank_1_1_account_ab7b39af7ca402d3936ba557e76fe3113}{get\+\_\+intresest\+\_\+rate}} () const noexcept=0
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_a8b84d7e257c3a56c4e721ef63394c3bd}{get\+\_\+username}} () const noexcept
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_a7aba4a360f4cb40b45480d0d098648c4}{get\+\_\+password}} () const noexcept
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_a576f9f90cb540bc003d63c9813908d30}{get\+\_\+gender}} () const noexcept
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_acf0182ab55138e97da358843651d48f6}{get\+\_\+telephone}} () const noexcept
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_aa0ab76262a8cd448a2ca4d4afa063782}{get\+\_\+\+ID\+\_\+number}} () const noexcept
+\item 
+void \mbox{\hyperlink{classbank_1_1_account_a49654d35d44d3bd4d4f962de3cf2e20b}{deposit}} (const long double deposit\+\_\+money\+\_\+count)
+\item 
+virtual void \mbox{\hyperlink{classbank_1_1_account_affc9db52f06e329f78afa103151573ab}{withdraw}} (const long double withdraw\+\_\+money\+\_\+count)=0
+\item 
+virtual long double \mbox{\hyperlink{classbank_1_1_account_aee0a9c1cd1aaed3844dc5b9ea1a004d5}{interest}} (const int days) const =0
+\item 
+void \mbox{\hyperlink{classbank_1_1_account_a1ff60281cd701b9eea0afc198f40f6f3}{account\+\_\+increase\+\_\+by\+\_\+interest}} (const int days) noexcept
+\item 
+virtual \mbox{\hyperlink{classbank_1_1_account_a40edcbdadf772d669a0e96c34421b376}{$\sim$\+Account}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr long double \mbox{\hyperlink{classbank_1_1_compcard_af2c13dc045b76992fcd1f85485bef179}{minimum\+\_\+balance}} = -\/7000
+\item 
+static constexpr long double \mbox{\hyperlink{classbank_1_1_compcard_ae1497b9e232777c74659ddbc7b4b2cf3}{interest\+\_\+rate}} = 0.\+00425
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classbank_1_1_account}{bank\+::\+Account}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_ab883d4fbf568e93fe7cac7dca9fd6256}{\+\_\+username}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_a628112143f02684faaaadc865eef690e}{\+\_\+password}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_af122e8e1465209c2d64f6f4e492ddf2d}{\+\_\+gender}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_af5190854b393f785b9c22c5728f1b362}{\+\_\+telephone}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_af94b077dc2785b9ce0fb020d1d0aea16}{\+\_\+\+ID\+\_\+number}} = \char`\"{}\char`\"{}
+\item 
+long double \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbank_1_1_compcard_a82c99e89d82d91eee3781f3624cb7877}\label{classbank_1_1_compcard_a82c99e89d82d91eee3781f3624cb7877}} 
+\index{bank::Compcard@{bank::Compcard}!Compcard@{Compcard}}
+\index{Compcard@{Compcard}!bank::Compcard@{bank::Compcard}}
+\doxysubsubsection{\texorpdfstring{Compcard()}{Compcard()}}
+{\footnotesize\ttfamily bank\+::\+Compcard\+::\+Compcard (\begin{DoxyParamCaption}\item[{std\+::string}]{username,  }\item[{std\+::string}]{password,  }\item[{std\+::string}]{gender,  }\item[{std\+::string}]{telephone,  }\item[{std\+::string}]{ID\+\_\+number,  }\item[{long double}]{balance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbank_1_1_compcard_aa8778e98faf3a5924ccd25489a2f5991}\label{classbank_1_1_compcard_aa8778e98faf3a5924ccd25489a2f5991}} 
+\index{bank::Compcard@{bank::Compcard}!get\_intresest\_rate@{get\_intresest\_rate}}
+\index{get\_intresest\_rate@{get\_intresest\_rate}!bank::Compcard@{bank::Compcard}}
+\doxysubsubsection{\texorpdfstring{get\_intresest\_rate()}{get\_intresest\_rate()}}
+{\footnotesize\ttfamily const long double bank\+::\+Compcard\+::get\+\_\+intresest\+\_\+rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classbank_1_1_account_ab7b39af7ca402d3936ba557e76fe3113}{bank\+::\+Account}}.
+
+\mbox{\Hypertarget{classbank_1_1_compcard_a0c037f6a9eb4f80958a7aa91d68c86de}\label{classbank_1_1_compcard_a0c037f6a9eb4f80958a7aa91d68c86de}} 
+\index{bank::Compcard@{bank::Compcard}!get\_minumum\_balance@{get\_minumum\_balance}}
+\index{get\_minumum\_balance@{get\_minumum\_balance}!bank::Compcard@{bank::Compcard}}
+\doxysubsubsection{\texorpdfstring{get\_minumum\_balance()}{get\_minumum\_balance()}}
+{\footnotesize\ttfamily const long double bank\+::\+Compcard\+::get\+\_\+minumum\+\_\+balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classbank_1_1_account_a03deaa6e73b88eaf34786cf4f72ec624}{bank\+::\+Account}}.
+
+\mbox{\Hypertarget{classbank_1_1_compcard_ac448658e303c384b703cc405b1203edc}\label{classbank_1_1_compcard_ac448658e303c384b703cc405b1203edc}} 
+\index{bank::Compcard@{bank::Compcard}!get\_sort\_priority@{get\_sort\_priority}}
+\index{get\_sort\_priority@{get\_sort\_priority}!bank::Compcard@{bank::Compcard}}
+\doxysubsubsection{\texorpdfstring{get\_sort\_priority()}{get\_sort\_priority()}}
+{\footnotesize\ttfamily const int bank\+::\+Compcard\+::get\+\_\+sort\+\_\+priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classbank_1_1_account_a9e50f2dfd49ab5f753169f560f9c16e6}{bank\+::\+Account}}.
+
+\mbox{\Hypertarget{classbank_1_1_compcard_a03565aa9a31ce7981bc83bb4ea74ac07}\label{classbank_1_1_compcard_a03565aa9a31ce7981bc83bb4ea74ac07}} 
+\index{bank::Compcard@{bank::Compcard}!interest@{interest}}
+\index{interest@{interest}!bank::Compcard@{bank::Compcard}}
+\doxysubsubsection{\texorpdfstring{interest()}{interest()}}
+{\footnotesize\ttfamily long double bank\+::\+Compcard\+::interest (\begin{DoxyParamCaption}\item[{const int}]{days }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classbank_1_1_account_aee0a9c1cd1aaed3844dc5b9ea1a004d5}{bank\+::\+Account}}.
+
+\mbox{\Hypertarget{classbank_1_1_compcard_a914147db605046473e5748021c7be870}\label{classbank_1_1_compcard_a914147db605046473e5748021c7be870}} 
+\index{bank::Compcard@{bank::Compcard}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!bank::Compcard@{bank::Compcard}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily void bank\+::\+Compcard\+::withdraw (\begin{DoxyParamCaption}\item[{const long double}]{withdraw\+\_\+money\+\_\+count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classbank_1_1_account_affc9db52f06e329f78afa103151573ab}{bank\+::\+Account}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbank_1_1_compcard_ae1497b9e232777c74659ddbc7b4b2cf3}\label{classbank_1_1_compcard_ae1497b9e232777c74659ddbc7b4b2cf3}} 
+\index{bank::Compcard@{bank::Compcard}!interest\_rate@{interest\_rate}}
+\index{interest\_rate@{interest\_rate}!bank::Compcard@{bank::Compcard}}
+\doxysubsubsection{\texorpdfstring{interest\_rate}{interest\_rate}}
+{\footnotesize\ttfamily constexpr long double bank\+::\+Compcard\+::interest\+\_\+rate = 0.\+00425\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbank_1_1_compcard_af2c13dc045b76992fcd1f85485bef179}\label{classbank_1_1_compcard_af2c13dc045b76992fcd1f85485bef179}} 
+\index{bank::Compcard@{bank::Compcard}!minimum\_balance@{minimum\_balance}}
+\index{minimum\_balance@{minimum\_balance}!bank::Compcard@{bank::Compcard}}
+\doxysubsubsection{\texorpdfstring{minimum\_balance}{minimum\_balance}}
+{\footnotesize\ttfamily constexpr long double bank\+::\+Compcard\+::minimum\+\_\+balance = -\/7000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{account_8hpp}{account.\+hpp}}\item 
+source/\mbox{\hyperlink{account_8cpp}{account.\+cpp}}\end{DoxyCompactItemize}

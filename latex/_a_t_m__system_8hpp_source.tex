@@ -1,0 +1,95 @@
+\hypertarget{_a_t_m__system_8hpp_source}{}\doxysection{ATM\+\_\+system.\+hpp}
+\label{_a_t_m__system_8hpp_source}\index{include/ATM\_system.hpp@{include/ATM\_system.hpp}}
+\mbox{\hyperlink{_a_t_m__system_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ ATM\ System\ is\ a\ simple}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ "{}operating\ system"{}}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ acting\ as\ an\ simple\ ATM\ Terminal\ Machine}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ \_\_ATM\_SYS\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ \_\_ATM\_SYS\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{account_8hpp}{account.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{database_8hpp}{database.hpp}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebank}{bank}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbank_1_1_a_t_m}{ATM}}\ \{}
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1io_1_1file__input__and__output}{io::file\_input\_and\_output}}\ \mbox{\hyperlink{classbank_1_1io_1_1file__input__and__output}{file\_io}};}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1_a_t_m}{ATM}}\ \mbox{\hyperlink{classbank_1_1_a_t_m}{self\_type}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{const}\ std::string\ admin\_username\ =\ \textcolor{stringliteral}{"{}admin"{}};}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{const}\ std::string\ admin\_password\ =\ \textcolor{stringliteral}{"{}1337Code"{}};}
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{classbank_1_1io_1_1file__input__and__output}{file\_io}}\ file\_stream;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \textcolor{comment}{//\ a\ united\ interface}}
+\DoxyCodeLine{00029\ \ \ std::vector<std::shared\_ptr<Account>>\ accounts;}
+\DoxyCodeLine{00030\ \ \ \textcolor{comment}{//\ an\ iterator\ to\ tell\ where\ user\ is}}
+\DoxyCodeLine{00031\ \ \ std::vector<std::shared\_ptr<Account>>::iterator\ user\_logged\_in\_at;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \textcolor{comment}{//\ if\ there\ was\ an\ undefined\ account\ type...}}
+\DoxyCodeLine{00035\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbank_1_1_a_t_m_1_1account_type_not_defined}{accountTypeNotDefined}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structbank_1_1_a_t_m_1_1account_type_not_defined_a2a72c9c0a5bc733412190b31f18bc6a4}{what}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Undefined\ account\ type."{}};\ \}}
+\DoxyCodeLine{00037\ \ \ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{comment}{/*\ Initialization\ and*\ menus\ */}}
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{classbank_1_1_a_t_m_a63579c68119d3ae540967dcd46fcc132}{ATM}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ input}}
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_a76e77e2febbac2f8b5f40c6ea06cf88e}{save}}()\ noexcept;\ \textcolor{comment}{//\ output}}
+\DoxyCodeLine{00042\ \ \ \string~\mbox{\hyperlink{classbank_1_1_a_t_m}{ATM}}();}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_a7df7652120f23672e852711e076ffc7b}{main\_menu}}()\ noexcept;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \textcolor{comment}{//\ what\ a\ user\ can\ do}}
+\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_aa3db2495e4384c2df03afaf210479b35}{user\_login\_menu}}()\ noexcept;}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_a23aaad8aa1d306a36bcb3765f4c71795}{user\_menu}}()\ noexcept;}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_af21590e6afb5d531664d9275c5f86156}{user\_deposit\_menu}}()\ noexcept;}
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_a112c8913dd306305b39ed5d4d810e863}{user\_withdraw\_menu}}()\ noexcept;}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_a9fc0a2c5028c88dcd8d90d765e9abdd8}{user\_interest\_calculation\_menu}}()\ noexcept;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \textcolor{comment}{//\ what\ an\ administrator\ can\ do}}
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_a610db7c03bf6c9735591d6fdc74bb5d7}{admin\_login\_menu}}()\ noexcept;}
+\DoxyCodeLine{00054\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_a3b5d88217ee4f3e8afe373b6891bcbf6}{admin\_menu}}()\ noexcept;}
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_ad47c60de0afc8fb55ef692d4005540b1}{admin\_check\_all\_info}}()\ noexcept;}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_afd2205496e8f5cb75eba3e38ace1f759}{admin\_add\_account\_menu}}()\ noexcept;}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_a_t_m_ae2422b5b584675d97d1cb02f51e8103b}{admin\_remove\_account\_menu}}()\ noexcept;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ private:}
+\DoxyCodeLine{00060\ \textcolor{comment}{\ \ /*********User\ Operations*********/}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \textcolor{comment}{//\ to\ check\ if\ a\ user\ logged\ in}}
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{bool}\ user\_is\_logged\_in(const\ std::\textcolor{keywordtype}{string}\ \&username,}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ std::\textcolor{keywordtype}{string}\ \&password)\ noexcept;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{comment}{//\ print\ out\ the\ user\ info}}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ check\_info()\ const\ noexcept;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{comment}{\ \ /*********Admin\ Operations*********/}}
+\DoxyCodeLine{00070\ \ \ \textcolor{comment}{//\ to\ check\ if\ an\ admin\ is\ logged\ in}}
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{bool}\ admin\_is\_logged\_in(const\ std::\textcolor{keywordtype}{string}\ \&username,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ std::\textcolor{keywordtype}{string}\ \&password)\ const\ noexcept;}
+\DoxyCodeLine{00073\ \ \ self\_type\ \&add\_account(std::\textcolor{keywordtype}{string}\ account\_type,\ std::\textcolor{keywordtype}{string}\ username,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::\textcolor{keywordtype}{string}\ password,\ std::\textcolor{keywordtype}{string}\ gender,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::\textcolor{keywordtype}{string}\ telephone,\ std::\textcolor{keywordtype}{string}\ ID\_number);}
+\DoxyCodeLine{00076\ \ \ self\_type\ \&}
+\DoxyCodeLine{00077\ \ \ remove\_account(std::vector<std::shared\_ptr<\mbox{\hyperlink{classbank_1_1_account}{Account}}>>::iterator\ pos);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \textcolor{comment}{//\ no\ "{}read()"{}\ because\ the\ ATM\ autpmatically\ reads\ data\ from\ a\ given\ data}}
+\DoxyCodeLine{00080\ \ \ \textcolor{comment}{//\ name(as\ an\ augument)\ while\ initialization}}
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{void}\ read\_as(std::\textcolor{keywordtype}{string}\ file\_name);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \textcolor{comment}{//\ save\ as\ "{}file\_name"{}.csv}}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{void}\ save\_as(std::\textcolor{keywordtype}{string}\ file\_name)\ const\ noexcept;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{comment}{//\ friend\ class\ io::file\_input\_and\_output;}}
+\DoxyCodeLine{00087\ \};\ \textcolor{comment}{//\ class\ ATM}}
+\DoxyCodeLine{00088\ \}\ \textcolor{comment}{//\ namespace\ bank}}
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_ATM\_SYS\_H\_}}
+
+\end{DoxyCode}

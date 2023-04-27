@@ -1,0 +1,190 @@
+\hypertarget{account_8hpp_source}{}\doxysection{account.\+hpp}
+\label{account_8hpp_source}\index{include/account.hpp@{include/account.hpp}}
+\mbox{\hyperlink{account_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ bank.cpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ this\ header\ defines\ basic\ classes}}
+\DoxyCodeLine{00005\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_\_ACCOUNT\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_\_ACCOUNT\_H\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebank}{bank}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbank_1_1_account}{Account}}\ \{}
+\DoxyCodeLine{00017\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1_account}{Account}}\ \mbox{\hyperlink{classbank_1_1_account}{self\_type}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ std::string\ \mbox{\hyperlink{classbank_1_1_account_ab883d4fbf568e93fe7cac7dca9fd6256}{\_username}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00021\ \ \ std::string\ \mbox{\hyperlink{classbank_1_1_account_a628112143f02684faaaadc865eef690e}{\_password}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00022\ \ \ std::string\ \mbox{\hyperlink{classbank_1_1_account_af122e8e1465209c2d64f6f4e492ddf2d}{\_gender}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00023\ \ \ std::string\ \mbox{\hyperlink{classbank_1_1_account_af5190854b393f785b9c22c5728f1b362}{\_telephone}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00024\ \ \ std::string\ \mbox{\hyperlink{classbank_1_1_account_af94b077dc2785b9ce0fb020d1d0aea16}{\_ID\_number}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00025\ \ \ \textcolor{comment}{//\ useing\ long\ double\ instead\ of\ double\ to\ ensure\ the\ accuracy}}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{classbank_1_1_account_ae2083a2990d0f807898c681abc19196f}{Account}}(std::string\ username,\ std::string\ password,\ std::string\ gender,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ std::string\ telephone,\ std::string\ ID\_number,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classbank_1_1_account_ab883d4fbf568e93fe7cac7dca9fd6256}{\_username}}(std::move(username)),\ \mbox{\hyperlink{classbank_1_1_account_a628112143f02684faaaadc865eef690e}{\_password}}(std::move(password)),}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbank_1_1_account_af122e8e1465209c2d64f6f4e492ddf2d}{\_gender}}(std::move(gender)),\ \mbox{\hyperlink{classbank_1_1_account_af5190854b393f785b9c22c5728f1b362}{\_telephone}}(std::move(telephone)),}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbank_1_1_account_af94b077dc2785b9ce0fb020d1d0aea16}{\_ID\_number}}(std::move(ID\_number)),\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}}(\mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})\ \{\}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classbank_1_1_account_aeb5fe53da7c34022da5aaf557145ce4e}{is\_login}}(\textcolor{keyword}{const}\ std::string\ \&username,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&password)\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbank_1_1_account_a9e50f2dfd49ab5f753169f560f9c16e6}{get\_sort\_priority}}()\ const\ noexcept\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_a1762c93305dafa87779d6c6427ef2c29}{get\_balance}}()\ const\ noexcept;}
+\DoxyCodeLine{00040\ \ \ virtual\ const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_a03deaa6e73b88eaf34786cf4f72ec624}{get\_minumum\_balance}}()\ const\ noexcept\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ virtual\ const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_ab7b39af7ca402d3936ba557e76fe3113}{get\_intresest\_rate}}()\ const\ noexcept\ =\ 0;}
+\DoxyCodeLine{00042\ \ \ const\ std::\textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classbank_1_1_account_a8b84d7e257c3a56c4e721ef63394c3bd}{get\_username}}()\ const\ noexcept;}
+\DoxyCodeLine{00043\ \ \ const\ std::\textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classbank_1_1_account_a7aba4a360f4cb40b45480d0d098648c4}{get\_password}}()\ const\ noexcept;}
+\DoxyCodeLine{00044\ \ \ const\ std::\textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classbank_1_1_account_a576f9f90cb540bc003d63c9813908d30}{get\_gender}}()\ const\ noexcept;}
+\DoxyCodeLine{00045\ \ \ const\ std::\textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classbank_1_1_account_acf0182ab55138e97da358843651d48f6}{get\_telephone}}()\ const\ noexcept;}
+\DoxyCodeLine{00046\ \ \ const\ std::\textcolor{keywordtype}{string}\ \&\mbox{\hyperlink{classbank_1_1_account_aa0ab76262a8cd448a2ca4d4afa063782}{get\_ID\_number}}()\ const\ noexcept;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{comment}{//\ not\ allow\ user\ to\ deposit\ or\ withdraw\ a\ wrong\ amount\ of\ money\ which\ is\ less}}
+\DoxyCodeLine{00049\ \ \ \textcolor{comment}{//\ than\ zero.}}
+\DoxyCodeLine{00050\ \ \ struct\ \mbox{\hyperlink{structbank_1_1_account_1_1money_less_than_zero}{moneyLessThanZero}}\ :\ public\ std::exception\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structbank_1_1_account_1_1money_less_than_zero_a89b8f7b187db1d07b7d0241f874922a5}{what}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}The\ money\ you\ deposit/withdraw\ must\ be\ greater\ than\ 0."{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{comment}{//\ not\ allow\ invalid\ balace\ in\ a\ account}}
+\DoxyCodeLine{00057\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbank_1_1_account_1_1money_invalid_in_account}{moneyInvalidInAccount}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structbank_1_1_account_1_1money_invalid_in_account_a9717d5e991acff702f4b509c959ad584}{what}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}You\ are\ trying\ to\ withdraw\ more\ money\ than\ what\ you\ are\ able\ to\ "{}}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\(\backslash\)ntake,\ please\ try\ again."{}};}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbank_1_1_account_1_1day_less_than_zero}{dayLessThanZero}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structbank_1_1_account_1_1day_less_than_zero_aebfd321ca5d47cbe319b7fe5eea7e51f}{what}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}The\ number\ of\ days\ cannot\ be\ a\ negative\ number."{}};}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_account_a49654d35d44d3bd4d4f962de3cf2e20b}{deposit}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ deposit\_money\_count);}
+\DoxyCodeLine{00071\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_account_affc9db52f06e329f78afa103151573ab}{withdraw}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ withdraw\_money\_count)\ =\ 0;}
+\DoxyCodeLine{00072\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_aee0a9c1cd1aaed3844dc5b9ea1a004d5}{interest}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ days)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_account_a1ff60281cd701b9eea0afc198f40f6f3}{account\_increase\_by\_interest}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ days)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classbank_1_1_account_a40edcbdadf772d669a0e96c34421b376}{\string~Account}}()\ \{\}}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbank_1_1_debit}{Debit}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classbank_1_1_account}{Account}}\ \{}
+\DoxyCodeLine{00079\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1_debit}{Debit}}\ \mbox{\hyperlink{classbank_1_1_debit}{self\_type}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00082\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_ae41e51bb3bc7e9716ec4688970c1be11}{minimum\_balance}}\ =\ 0.0;}
+\DoxyCodeLine{00083\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a4cbafb98650686dd075c61cf6738f0bd}{interest\_rate}}\ =\ 0.00625;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00086\ \ \ \mbox{\hyperlink{classbank_1_1_debit_a49af8df65a6a0c0498a273651ea1a6eb}{Debit}}(std::string\ username,\ std::string\ password,\ std::string\ gender,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ std::string\ telephone,\ std::string\ ID\_number,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classbank_1_1_account}{Account}}(std::move(username),\ std::move(password),\ std::move(gender),}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::move(telephone),\ std::move(ID\_number),\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})\ \{\}}
+\DoxyCodeLine{00090\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbank_1_1_debit_ae05515c6c89665d468bf618d1b760935}{get\_sort\_priority}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00091\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a63723201584b19f67ced3ed231996a8c}{get\_minumum\_balance}}()\ const\ noexcept;}
+\DoxyCodeLine{00092\ \ \ const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a44e3f54a5d787b47c4c7f94528f8308e}{get\_intresest\_rate}}()\ const\ noexcept;}
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_debit_a28e10d8421ba2aee0b08fbdb786312ab}{withdraw}}(const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ withdraw\_money\_count);}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a30075c03d948fb11b204804011e8b297}{interest}}(const\ \textcolor{keywordtype}{int}\ days)\ const;}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ class\ \mbox{\hyperlink{classbank_1_1_compcard}{Compcard}}\ :\ public\ \mbox{\hyperlink{classbank_1_1_account}{Account}}\ \{}
+\DoxyCodeLine{00098\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1_compcard}{Compcard}}\ \mbox{\hyperlink{classbank_1_1_compcard}{self\_type}};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00101\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_ae41e51bb3bc7e9716ec4688970c1be11}{minimum\_balance}}\ =\ -\/7000;}
+\DoxyCodeLine{00102\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a4cbafb98650686dd075c61cf6738f0bd}{interest\_rate}}\ =\ 0.00425;}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00105\ \ \ \mbox{\hyperlink{classbank_1_1_compcard_a82c99e89d82d91eee3781f3624cb7877}{Compcard}}(std::string\ username,\ std::string\ password,\ std::string\ gender,}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ std::string\ telephone,\ std::string\ ID\_number,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classbank_1_1_account}{Account}}(std::move(username),\ std::move(password),\ std::move(gender),}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::move(telephone),\ std::move(ID\_number),\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})\ \{\}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbank_1_1_compcard_ac448658e303c384b703cc405b1203edc}{get\_sort\_priority}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ 1;\ \}}
+\DoxyCodeLine{00111\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a63723201584b19f67ced3ed231996a8c}{get\_minumum\_balance}}()\ const\ noexcept;}
+\DoxyCodeLine{00112\ \ \ const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a44e3f54a5d787b47c4c7f94528f8308e}{get\_intresest\_rate}}()\ const\ noexcept;}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbank_1_1_debit_a28e10d8421ba2aee0b08fbdb786312ab}{withdraw}}(const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ withdraw\_money\_count);}
+\DoxyCodeLine{00114\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a30075c03d948fb11b204804011e8b297}{interest}}(const\ \textcolor{keywordtype}{int}\ days)\ const;}
+\DoxyCodeLine{00115\ \};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ class\ \mbox{\hyperlink{classbank_1_1_credit}{Credit}}\ :\ public\ \mbox{\hyperlink{classbank_1_1_account}{Account}}\ \{}
+\DoxyCodeLine{00118\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1_credit}{Credit}}\ \mbox{\hyperlink{classbank_1_1_credit}{self\_type}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00121\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a4cbafb98650686dd075c61cf6738f0bd}{interest\_rate}}\ =\ 0.0;}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00124\ \ \ \mbox{\hyperlink{classbank_1_1_credit_aea35d4f76e712da9ad6b370df0e6cd47}{Credit}}(std::string\ username,\ std::string\ password,\ std::string\ gender,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ std::string\ telephone,\ std::string\ ID\_number,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classbank_1_1_account}{Account}}(std::move(username),\ std::move(password),\ std::move(gender),}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::move(telephone),\ std::move(ID\_number),\ \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})\ \{\}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a44e3f54a5d787b47c4c7f94528f8308e}{get\_intresest\_rate}}()\ const\ noexcept;}
+\DoxyCodeLine{00130\ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classbank_1_1_debit_a30075c03d948fb11b204804011e8b297}{interest}}(const\ \textcolor{keywordtype}{int}\ days)\ const;}
+\DoxyCodeLine{00131\ \ \ virtual\ \string~\mbox{\hyperlink{classbank_1_1_credit}{Credit}}()\ \{\}}
+\DoxyCodeLine{00132\ \};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbank_1_1_normal_credit}{NormalCredit}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classbank_1_1_credit}{Credit}}\ \{}
+\DoxyCodeLine{00135\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1_normal_credit}{NormalCredit}}\ \mbox{\hyperlink{classbank_1_1_normal_credit}{self\_type}};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00138\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ minimum\_balance\ =\ -\/7000;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00141\ \ \ \mbox{\hyperlink{classbank_1_1_normal_credit_a54f329ef598f4c553255d8c5943653c2}{NormalCredit}}(std::string\ username,\ std::string\ password,\ std::string\ gender,}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ telephone,\ std::string\ ID\_number,}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ balance)}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classbank_1_1_credit}{Credit}}(std::move(username),\ std::move(password),\ std::move(gender),}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::move(telephone),\ std::move(ID\_number),\ balance)\ \{\}}
+\DoxyCodeLine{00146\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbank_1_1_normal_credit_a3da55e772ae0cedc943fb54e76449d13}{get\_sort\_priority}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ 2;\ \}}
+\DoxyCodeLine{00147\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ get\_minumum\_balance()\ const\ noexcept;}
+\DoxyCodeLine{00148\ \ \ \textcolor{keywordtype}{void}\ withdraw(const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ withdraw\_money\_count);}
+\DoxyCodeLine{00149\ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ class\ \mbox{\hyperlink{classbank_1_1_v_i_p_credit}{VIPCredit}}\ :\ public\ \mbox{\hyperlink{classbank_1_1_credit}{Credit}}\ \{}
+\DoxyCodeLine{00152\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1_v_i_p_credit}{VIPCredit}}\ \mbox{\hyperlink{classbank_1_1_v_i_p_credit}{self\_type}};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00155\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ minimum\_balance\ =\ -\/50000;}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00158\ \ \ \mbox{\hyperlink{classbank_1_1_v_i_p_credit_a5eeae15cd7f4c54c7d9cac87f2aff18c}{VIPCredit}}(std::string\ username,\ std::string\ password,\ std::string\ gender,}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ telephone,\ std::string\ ID\_number,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ balance)}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classbank_1_1_credit}{Credit}}(std::move(username),\ std::move(password),\ std::move(gender),}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::move(telephone),\ std::move(ID\_number),\ balance)\ \{\}}
+\DoxyCodeLine{00162\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbank_1_1_v_i_p_credit_a4e6a21e83d57cb4168db53aba8354481}{get\_sort\_priority}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ 3;\ \}}
+\DoxyCodeLine{00163\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ get\_minumum\_balance()\ const\ noexcept;}
+\DoxyCodeLine{00164\ \ \ \textcolor{keywordtype}{void}\ withdraw(const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ withdraw\_money\_count);}
+\DoxyCodeLine{00165\ \};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ class\ \mbox{\hyperlink{classbank_1_1_v_v_i_p_credit}{VVIPCredit}}\ :\ public\ \mbox{\hyperlink{classbank_1_1_credit}{Credit}}\ \{}
+\DoxyCodeLine{00168\ \ \ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{classbank_1_1_v_v_i_p_credit}{VVIPCredit}}\ \mbox{\hyperlink{classbank_1_1_v_v_i_p_credit}{self\_type}};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00171\ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ minimum\_balance\ =\ -\/200000;}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00174\ \ \ \mbox{\hyperlink{classbank_1_1_v_v_i_p_credit_a19478c83c55ae98b1a18a52bb5408ebc}{VVIPCredit}}(std::string\ username,\ std::string\ password,\ std::string\ gender,}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ telephone,\ std::string\ ID\_number,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ balance)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classbank_1_1_credit}{Credit}}(std::move(username),\ std::move(password),\ std::move(gender),}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::move(telephone),\ std::move(ID\_number),\ balance)\ \{\}}
+\DoxyCodeLine{00178\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbank_1_1_v_v_i_p_credit_a20f1b1181855603c52fd2beb8588af4a}{get\_sort\_priority}}()\ const\ noexcept\ \{\ \textcolor{keywordflow}{return}\ 4;\ \}}
+\DoxyCodeLine{00179\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ get\_minumum\_balance()\ const\ noexcept;}
+\DoxyCodeLine{00180\ \ \ \textcolor{keywordtype}{void}\ withdraw(const\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ withdraw\_money\_count);}
+\DoxyCodeLine{00181\ \};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \}\ \textcolor{comment}{//\ namespace\ bank}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_ACCOUNT\_H\_}}
+
+\end{DoxyCode}

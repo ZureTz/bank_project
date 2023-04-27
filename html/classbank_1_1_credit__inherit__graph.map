@@ -1,0 +1,7 @@
+<map id="bank::Credit" name="bank::Credit">
+<area shape="rect" id="node1" title=" " alt="" coords="220,357,366,480"/>
+<area shape="rect" id="node3" href="$classbank_1_1_normal_credit.html" title=" " alt="" coords="5,528,181,651"/>
+<area shape="rect" id="node4" href="$classbank_1_1_v_i_p_credit.html" title=" " alt="" coords="205,528,381,651"/>
+<area shape="rect" id="node5" href="$classbank_1_1_v_v_i_p_credit.html" title=" " alt="" coords="405,528,581,651"/>
+<area shape="rect" id="node2" href="$classbank_1_1_account.html" title=" " alt="" coords="205,5,381,309"/>
+</map>

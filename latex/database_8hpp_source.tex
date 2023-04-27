@@ -1,0 +1,63 @@
+\hypertarget{database_8hpp_source}{}\doxysection{database.\+hpp}
+\label{database_8hpp_source}\index{include/database.hpp@{include/database.hpp}}
+\mbox{\hyperlink{database_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ this\ header\ gives\ the\ class\ used\ to\ input\ and\ output\ files}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ \ using\ fstream\ with\ the\ support\ of\ database}}
+\DoxyCodeLine{00005\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ \_\_DATABASE\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ \_\_DATABASE\_H\_}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacebank}{bank}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }io\ \{}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ if\ file\ not\ found:}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbank_1_1io_1_1file_not_found}{fileNotFound}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structbank_1_1io_1_1file_not_found_a824c7c60ebbdea5854d1cd87eb514de3}{what}}()\ const\ noexcept\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{stringliteral}{"{}Error:\ File\ is\ not\ open/not\ found."{}});}
+\DoxyCodeLine{00024\ \ \ \}}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ reading\ files}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbank_1_1io_1_1file__read}{file\_read}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00030\ \ \ std::ifstream\ \mbox{\hyperlink{classbank_1_1io_1_1file__read_a93ddd22afe57329740177e7eac6395f8}{in\_file}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \textcolor{comment}{//\ database\ means\ all\ data\ the\ database.csv\ include.}}
+\DoxyCodeLine{00034\ \ \ std::vector<std::vector<std::string>>\ \mbox{\hyperlink{classbank_1_1io_1_1file__read_aae62fa7bd5f56f0aaac918a0bdf1e95a}{database}};}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{classbank_1_1io_1_1file__read}{file\_read}}(std::string\ str\ =\ \textcolor{stringliteral}{"{}database.csv"{}});}
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{classbank_1_1io_1_1file__read_adcc009cc61ff26aa50cb2f0526a441e7}{\string~file\_read}}()\ noexcept;}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ writing\ files}}
+\DoxyCodeLine{00040\ class\ \mbox{\hyperlink{classbank_1_1io_1_1file__wirte}{file\_wirte}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ std::ofstream\ \mbox{\hyperlink{classbank_1_1io_1_1file__wirte_a658a402a7880abe6930588835da1fc6b}{out\_file}};}
+\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{classbank_1_1io_1_1file__wirte}{file\_wirte}}(std::string\ str\ =\ \textcolor{stringliteral}{"{}database.csv"{}});}
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{classbank_1_1io_1_1file__wirte}{\string~file\_wirte}}()\ noexcept;}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ combination\ to\ support\ both\ input\ and\ output}}
+\DoxyCodeLine{00048\ class\ \mbox{\hyperlink{classbank_1_1io_1_1file__input__and__output}{file\_input\_and\_output}}\ :\ public\ \mbox{\hyperlink{classbank_1_1io_1_1file__read}{file\_read}},\ public\ \mbox{\hyperlink{classbank_1_1io_1_1file__wirte}{file\_wirte}}\ \{}
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \mbox{\hyperlink{classbank_1_1io_1_1file__input__and__output_a412926e9d76c28d3524e87c6f611bf63}{file\_input\_and\_output}}(std::string\ instr\ =\ \textcolor{stringliteral}{"{}database.csv"{}},}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ outstr\ =\ \textcolor{stringliteral}{"{}database.csv"{}})}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classbank_1_1io_1_1file__read}{file\_read}}(std::move(instr)),\ \mbox{\hyperlink{classbank_1_1io_1_1file__wirte}{file\_wirte}}(std::move(outstr))\ \{\}}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \}\ \textcolor{comment}{//\ namespace\ io}}
+\DoxyCodeLine{00056\ \}\ \textcolor{comment}{//\ namespace\ bank}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ \_\_DATABASE\_H\_}}
+
+\end{DoxyCode}

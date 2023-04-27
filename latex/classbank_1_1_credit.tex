@@ -1,0 +1,144 @@
+\hypertarget{classbank_1_1_credit}{}\doxysection{bank\+::Credit Class Reference}
+\label{classbank_1_1_credit}\index{bank::Credit@{bank::Credit}}
+
+
+{\ttfamily \#include $<$account.\+hpp$>$}
+
+
+
+Inheritance diagram for bank\+::Credit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbank_1_1_credit__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bank\+::Credit\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classbank_1_1_credit__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbank_1_1_credit_aea35d4f76e712da9ad6b370df0e6cd47}{Credit}} (std\+::string username, std\+::string password, std\+::string gender, std\+::string telephone, std\+::string ID\+\_\+number, long double \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})
+\item 
+const long double \mbox{\hyperlink{classbank_1_1_credit_aa98d2eafba3d6a3f2cbee28e64b6d1c3}{get\+\_\+intresest\+\_\+rate}} () const noexcept
+\item 
+long double \mbox{\hyperlink{classbank_1_1_credit_aab756a26243e441b531538984521e69c}{interest}} (const int days) const
+\item 
+virtual \mbox{\hyperlink{classbank_1_1_credit_a1a0de5bbfb140bf50c57d4135fc65f69}{$\sim$\+Credit}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classbank_1_1_account}{bank\+::\+Account}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbank_1_1_account_ae2083a2990d0f807898c681abc19196f}{Account}} (std\+::string username, std\+::string password, std\+::string gender, std\+::string telephone, std\+::string ID\+\_\+number, long double \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}})
+\item 
+bool \mbox{\hyperlink{classbank_1_1_account_aeb5fe53da7c34022da5aaf557145ce4e}{is\+\_\+login}} (const std\+::string \&username, const std\+::string \&password) const noexcept
+\item 
+virtual const int \mbox{\hyperlink{classbank_1_1_account_a9e50f2dfd49ab5f753169f560f9c16e6}{get\+\_\+sort\+\_\+priority}} () const noexcept=0
+\item 
+const long double \mbox{\hyperlink{classbank_1_1_account_a1762c93305dafa87779d6c6427ef2c29}{get\+\_\+balance}} () const noexcept
+\item 
+virtual const long double \mbox{\hyperlink{classbank_1_1_account_a03deaa6e73b88eaf34786cf4f72ec624}{get\+\_\+minumum\+\_\+balance}} () const noexcept=0
+\item 
+virtual const long double \mbox{\hyperlink{classbank_1_1_account_ab7b39af7ca402d3936ba557e76fe3113}{get\+\_\+intresest\+\_\+rate}} () const noexcept=0
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_a8b84d7e257c3a56c4e721ef63394c3bd}{get\+\_\+username}} () const noexcept
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_a7aba4a360f4cb40b45480d0d098648c4}{get\+\_\+password}} () const noexcept
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_a576f9f90cb540bc003d63c9813908d30}{get\+\_\+gender}} () const noexcept
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_acf0182ab55138e97da358843651d48f6}{get\+\_\+telephone}} () const noexcept
+\item 
+const std\+::string \& \mbox{\hyperlink{classbank_1_1_account_aa0ab76262a8cd448a2ca4d4afa063782}{get\+\_\+\+ID\+\_\+number}} () const noexcept
+\item 
+void \mbox{\hyperlink{classbank_1_1_account_a49654d35d44d3bd4d4f962de3cf2e20b}{deposit}} (const long double deposit\+\_\+money\+\_\+count)
+\item 
+virtual void \mbox{\hyperlink{classbank_1_1_account_affc9db52f06e329f78afa103151573ab}{withdraw}} (const long double withdraw\+\_\+money\+\_\+count)=0
+\item 
+virtual long double \mbox{\hyperlink{classbank_1_1_account_aee0a9c1cd1aaed3844dc5b9ea1a004d5}{interest}} (const int days) const =0
+\item 
+void \mbox{\hyperlink{classbank_1_1_account_a1ff60281cd701b9eea0afc198f40f6f3}{account\+\_\+increase\+\_\+by\+\_\+interest}} (const int days) noexcept
+\item 
+virtual \mbox{\hyperlink{classbank_1_1_account_a40edcbdadf772d669a0e96c34421b376}{$\sim$\+Account}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr long double \mbox{\hyperlink{classbank_1_1_credit_addbe5cf4128b0853087be92882b7898e}{interest\+\_\+rate}} = 0.\+0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classbank_1_1_account}{bank\+::\+Account}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_ab883d4fbf568e93fe7cac7dca9fd6256}{\+\_\+username}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_a628112143f02684faaaadc865eef690e}{\+\_\+password}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_af122e8e1465209c2d64f6f4e492ddf2d}{\+\_\+gender}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_af5190854b393f785b9c22c5728f1b362}{\+\_\+telephone}} = \char`\"{}\char`\"{}
+\item 
+std\+::string \mbox{\hyperlink{classbank_1_1_account_af94b077dc2785b9ce0fb020d1d0aea16}{\+\_\+\+ID\+\_\+number}} = \char`\"{}\char`\"{}
+\item 
+long double \mbox{\hyperlink{classbank_1_1_account_a5133afdf86c0564df12124824becfd1f}{balance}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbank_1_1_credit_aea35d4f76e712da9ad6b370df0e6cd47}\label{classbank_1_1_credit_aea35d4f76e712da9ad6b370df0e6cd47}} 
+\index{bank::Credit@{bank::Credit}!Credit@{Credit}}
+\index{Credit@{Credit}!bank::Credit@{bank::Credit}}
+\doxysubsubsection{\texorpdfstring{Credit()}{Credit()}}
+{\footnotesize\ttfamily bank\+::\+Credit\+::\+Credit (\begin{DoxyParamCaption}\item[{std\+::string}]{username,  }\item[{std\+::string}]{password,  }\item[{std\+::string}]{gender,  }\item[{std\+::string}]{telephone,  }\item[{std\+::string}]{ID\+\_\+number,  }\item[{long double}]{balance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbank_1_1_credit_a1a0de5bbfb140bf50c57d4135fc65f69}\label{classbank_1_1_credit_a1a0de5bbfb140bf50c57d4135fc65f69}} 
+\index{bank::Credit@{bank::Credit}!````~Credit@{$\sim$Credit}}
+\index{````~Credit@{$\sim$Credit}!bank::Credit@{bank::Credit}}
+\doxysubsubsection{\texorpdfstring{$\sim$Credit()}{~Credit()}}
+{\footnotesize\ttfamily virtual bank\+::\+Credit\+::$\sim$\+Credit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbank_1_1_credit_aa98d2eafba3d6a3f2cbee28e64b6d1c3}\label{classbank_1_1_credit_aa98d2eafba3d6a3f2cbee28e64b6d1c3}} 
+\index{bank::Credit@{bank::Credit}!get\_intresest\_rate@{get\_intresest\_rate}}
+\index{get\_intresest\_rate@{get\_intresest\_rate}!bank::Credit@{bank::Credit}}
+\doxysubsubsection{\texorpdfstring{get\_intresest\_rate()}{get\_intresest\_rate()}}
+{\footnotesize\ttfamily const long double bank\+::\+Credit\+::get\+\_\+intresest\+\_\+rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Implements \mbox{\hyperlink{classbank_1_1_account_ab7b39af7ca402d3936ba557e76fe3113}{bank\+::\+Account}}.
+
+\mbox{\Hypertarget{classbank_1_1_credit_aab756a26243e441b531538984521e69c}\label{classbank_1_1_credit_aab756a26243e441b531538984521e69c}} 
+\index{bank::Credit@{bank::Credit}!interest@{interest}}
+\index{interest@{interest}!bank::Credit@{bank::Credit}}
+\doxysubsubsection{\texorpdfstring{interest()}{interest()}}
+{\footnotesize\ttfamily long double bank\+::\+Credit\+::interest (\begin{DoxyParamCaption}\item[{const int}]{days }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classbank_1_1_account_aee0a9c1cd1aaed3844dc5b9ea1a004d5}{bank\+::\+Account}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbank_1_1_credit_addbe5cf4128b0853087be92882b7898e}\label{classbank_1_1_credit_addbe5cf4128b0853087be92882b7898e}} 
+\index{bank::Credit@{bank::Credit}!interest\_rate@{interest\_rate}}
+\index{interest\_rate@{interest\_rate}!bank::Credit@{bank::Credit}}
+\doxysubsubsection{\texorpdfstring{interest\_rate}{interest\_rate}}
+{\footnotesize\ttfamily constexpr long double bank\+::\+Credit\+::interest\+\_\+rate = 0.\+0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{account_8hpp}{account.\+hpp}}\item 
+source/\mbox{\hyperlink{account_8cpp}{account.\+cpp}}\end{DoxyCompactItemize}

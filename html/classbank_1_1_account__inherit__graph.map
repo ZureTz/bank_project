@@ -1,0 +1,9 @@
+<map id="bank::Account" name="bank::Account">
+<area shape="rect" id="node1" title=" " alt="" coords="205,5,381,309"/>
+<area shape="rect" id="node2" href="$classbank_1_1_compcard.html" title=" " alt="" coords="21,357,197,525"/>
+<area shape="rect" id="node3" href="$classbank_1_1_credit.html" title=" " alt="" coords="220,379,366,503"/>
+<area shape="rect" id="node7" href="$classbank_1_1_debit.html" title=" " alt="" coords="389,357,565,525"/>
+<area shape="rect" id="node4" href="$classbank_1_1_normal_credit.html" title=" " alt="" coords="5,573,181,696"/>
+<area shape="rect" id="node5" href="$classbank_1_1_v_i_p_credit.html" title=" " alt="" coords="205,573,381,696"/>
+<area shape="rect" id="node6" href="$classbank_1_1_v_v_i_p_credit.html" title=" " alt="" coords="405,573,581,696"/>
+</map>
